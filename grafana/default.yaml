@@ -1,0 +1,43 @@
+apiVersion: 1
+
+datasources:
+  - access: "proxy"
+    accessControl:
+      alert.instances.external:read: true
+      alert.instances.external:write: true
+      alert.notifications.external:read: true
+      alert.notifications.external:write: true
+      alert.rules.external:read: true
+      alert.rules.external:write: true
+      datasources.id:read: true
+      datasources:delete: true
+      datasources:query: true
+      datasources:read: true
+      datasources:write: true
+    basicAuth: false
+    name: "Telemetry"
+    basicAuthPassword: ""
+    basicAuthUser: ""
+    type: "postgres"
+    id: 1
+    orgId: 1
+    url: "telemetry-logging:5432"
+    user: "metabase"
+    password: ""
+    database: "metabase_telemetry"
+    secureJsonFields: {}
+    isDefault: false
+    JsonData:
+      sslmode: "disable"
+      postgresVersion: 1200
+      timescaledb: true
+      tlsAuth: false
+      tlsAuthWithCACert: false
+      tlsConfigurationMethod: "file-path"
+      tlsSkipVerify: true
+    secureJsonData:
+      password: "mysecretpassword"
+    typeLogoUrl: ""
+    withCredentials: false
+    version: 1
+    readOnly: false
