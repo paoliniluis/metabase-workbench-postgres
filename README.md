@@ -12,7 +12,6 @@ The components are the following:
 6) A containerized NodeJS app that connects to the DW DB and obtains how many connections Metabase is using (to compare it against the connections that the logs say), and persists to "Connection Metrics" table in TimescaleDB
 7) TimescaleDB, that is set up with 3 tables: "App Telemetry", "Container Telemetry" and "Connection Metrics"
 
-
 ### How to run
 
 docker-compose up --build
@@ -23,3 +22,5 @@ localhost:8081 Nginx (HTTP/2), acting as reverse-proxy to Metabase. User/pass is
 localhost:3001 Metabase (without HTTP/2) - not recommended, it's recommended to access via Nginx
 localhost:8080 cAdvisor
 localhost:3000 Grafana (admin/admin)
+
+![diagram](SolutionDiagram.jpg "Solution diagram")
