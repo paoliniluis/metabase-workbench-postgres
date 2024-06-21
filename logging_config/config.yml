@@ -1,0 +1,8 @@
+version: 1
+config:
+  users:
+    - first_name: a
+      last_name: b
+      password: metabot123
+      email: a@b.com
+      is_superuser: true
